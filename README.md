@@ -17,7 +17,8 @@ var getToken = wdToken(config);
 
 `getToken` is then a function returning a [bluebird](https://github.com/petkaantonov/bluebird) promise, which when called returns an object that should look like:
 ```
-{ token: 'eb974a8adc9abacf7c9f3f94763ad92e51d76e57+\\',
+{
+  token: 'eb974a8adc9abacf7c9f3f94763ad92e51d76e57+\\',
   cookie: 'a very long cookie with your session data'
 }
 ```
