@@ -1,7 +1,7 @@
 {
   "name": "wikidata-token",
   "version": "1.0.1",
-  "description": "",
+  "description": "a promises-based lib abstracting authentification for write actions on the Wikidata API",
   "main": "build/wikidata-token.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,5 +14,19 @@
   "dependencies": {
     "bluereq": "^0.2.1",
     "inv-loggers": "^2.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxlath/wikidata-token.git"
+  },
+  "keywords": [
+    "wikidata",
+    "auth",
+    "token"
+  ],
+  "bugs": {
+    "url": "https://github.com/maxlath/wikidata-token/issues"
+  },
+  "homepage": "https://github.com/maxlath/wikidata-token"
 }
