@@ -1,0 +1,18 @@
+{
+  "name": "wikidata-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/wikidata-token.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf build; coffee -o build -c src",
+    "build-watch": "rm -rf build; coffee --watch -o build -c src",
+    "prepublish": "npm run build"
+  },
+  "author": "maxlath",
+  "license": "MIT",
+  "dependencies": {
+    "bluereq": "^0.2.1",
+    "inv-loggers": "^2.0.1"
+  }
+}
