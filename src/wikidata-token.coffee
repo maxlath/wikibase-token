@@ -1,7 +1,6 @@
 login = require './login'
-getToken = require './get_token'
+getTokenGetter = require './get_token_getter'
 
 module.exports = (config)->
   loginCookiesPromise = login config
-
-  return getToken(loginCookiesPromise)
+  return getTokenGetter loginCookiesPromise
