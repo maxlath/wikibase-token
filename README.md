@@ -22,3 +22,7 @@ var getToken = wdToken(config);
   cookie: 'a very long cookie with your session data'
 }
 ```
+
+### Example
+
+* [used in wikidata-agent to create claims](https://github.com/maxlath/wikidata-agent/blob/master/server/lib/create_claim.coffee)
