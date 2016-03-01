@@ -12,7 +12,7 @@
   "author": "maxlath",
   "license": "MIT",
   "dependencies": {
-    "bluereq": "^0.2.1",
+    "bluereq": "^2.0.1",
     "inv-loggers": "^2.0.1"
   },
   "devDependencies": {},
