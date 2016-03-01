@@ -19,7 +19,7 @@ module.exports = (config)->
   parseLoginToken = (res)->
     loginCookies = _.extractCookies res
     return data =
-      token: res.body.login.token
+      token: encodeURIComponent res.body.login.token
       cookies: loginCookies
 
   reallyLogin = (data)->
