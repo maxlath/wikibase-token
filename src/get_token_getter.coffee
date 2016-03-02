@@ -8,7 +8,7 @@ getToken = (loginCookies)->
 
 parseTokens = (loginCookies, res)->
   newCookies = _.extractCookies res
-  fullCookies = loginCookies + ';\n'+ newCookies
+  fullCookies = loginCookies + '; '+ newCookies
 
   return data =
     token: res.body.query.tokens.csrftoken
