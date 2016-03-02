@@ -13,8 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "bluereq": "^2.0.1",
-    "colors": "^1.1.2",
-    "inv-loggers": "^2.0.1"
+    "colors": "^1.1.2"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0"
