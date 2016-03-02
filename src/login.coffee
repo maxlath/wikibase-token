@@ -1,7 +1,6 @@
 breq = require 'bluereq'
 _ = require './utils'
 
-
 module.exports = (config)->
   { username, password } = config
 
@@ -10,7 +9,7 @@ module.exports = (config)->
   login = ->
     getLoginToken()
     .then reallyLogin
-    .catch _.Error('login')
+    .catch _.ErrorRethrow('login')
 
   getLoginToken = ->
     breq.post loginUrl

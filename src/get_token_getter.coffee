@@ -18,4 +18,4 @@ module.exports = (loginCookiesPromise)->
   return tokenGetter = ->
     loginCookiesPromise
     .then getToken
-    .catch _.Error('getToken')
+    .catch _.ErrorRethrow('getToken')
