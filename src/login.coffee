@@ -27,7 +27,15 @@ module.exports = (config)->
     loginUrlWithToken = "#{loginUrl}&lgtoken=#{token}"
 
     breq.post _.requestParams(loginUrlWithToken, cookies)
-    .then _.extractCookies
+    .then (res)->
+      if res.headers['set-cookie']? then _.extractCookies res
+      else
+        console.log 'really login error headers'.red
+        console.log res.statusCode
+        console.log res.headers
+        console.log 'really login error body'.red
+        console.log res.body
+        throw new Error 'really login error'
 
   # login just once, then use the same data consuming the same promise
   return login()
