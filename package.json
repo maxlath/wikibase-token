@@ -4,10 +4,9 @@
   "description": "a promises-based lib abstracting authentification for write actions on the Wikidata API",
   "main": "build/wikidata-token.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build; ./node_modules/coffee-script/bin/coffee -o build -c src",
-    "build-watch": "rm -rf build; ./node_modules/coffee-script/bin/coffee --watch -o build -c src",
-    "prepublish": "npm run build"
+    "lint": "standard",
+    "test": "ava",
+    "prepublish": "npm run lint && npm run test"
   },
   "author": "maxlath",
   "license": "MIT",
@@ -16,7 +15,9 @@
     "colors": "^1.1.2"
   },
   "devDependencies": {
-    "coffee-script": "^1.10.0"
+    "ava": "^0.18.1",
+    "config": "^1.25.1",
+    "standard": "^8.6.0"
   },
   "repository": {
     "type": "git",
