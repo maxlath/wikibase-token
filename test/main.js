@@ -1,7 +1,6 @@
 const test = require('ava')
 const CONFIG = require('config')
 const wikidataToken = require('../index.js')
-const _ = require('../lib/utils')
 
 test('wikidata-token works', t => {
   const tokenGetter = wikidataToken(CONFIG)
