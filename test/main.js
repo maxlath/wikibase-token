@@ -9,6 +9,12 @@ test('wikidata-token works', t => {
   return tokenGetter()
   .then(res => {
     t.true(res.token.length > 40)
-    t.true(res.cookie.length > 1000)
+    const { cookie } = res
+    // \w{30} => at least 32 characters
+    t.true(/wikidatawikiSession=\w{32}/.test(cookie))
+    t.true(/wikidatawikiUserID=\d{5}/.test(cookie))
+    t.true(/wikidatawikiUserName=\w+/.test(cookie))
+    t.true(/centralauth_Session=\w{32}/.test(cookie))
+    t.true(/centralauth_Token=\w{32}/.test(cookie))
   })
 })
