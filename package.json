@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "standard",
     "test": "ava",
-    "prepublish": "npm run lint && npm run test"
+    "prepublish": "npm run lint && npm run test",
+    "update-toc": "doctoc README.md"
   },
   "author": "maxlath",
   "license": "MIT",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "ava": "^0.18.1",
     "config": "^1.25.1",
+    "doctoc": "^1.2.0",
     "standard": "^8.6.0"
   },
   "repository": {
