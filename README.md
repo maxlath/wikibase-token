@@ -15,7 +15,7 @@ var getToken = wdToken(config);
 
 ```
 
-`getToken` is then a function, which when called returns a [bluebird](https://github.com/petkaantonov/bluebird) promise that shoud resolve to looking like:
+`getToken` is then a function, which when called returns an ES6 promise that shoud resolve to something looking like:
 ```javascript
 {
   token: 'eb974a8adc9abacf7c9f3f94763ad92e51d76e57+\\',
