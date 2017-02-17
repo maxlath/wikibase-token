@@ -11,7 +11,7 @@
   "author": "maxlath",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.1.2",
+    "chalk": "^1.1.3",
     "got": "^6.7.1"
   },
   "devDependencies": {
