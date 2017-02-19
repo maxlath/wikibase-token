@@ -20,9 +20,15 @@ npm install wikidata-token
 
 * use
 ```javascript
-var config = {username: 'myWikidataUsername', password: 'pa55word'};
-var wdToken = require('wikidata-token');
-var getToken = wdToken(config);
+var config = {
+  // Required
+  username: 'myWikidataUsername',
+  password: 'pa55word',
+  // Optional
+  verbose: true // Default: false
+}
+var wdToken = require('wikidata-token')
+var getToken = wdToken(config)
 
 ```
 
