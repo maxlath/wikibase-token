@@ -8,6 +8,10 @@ a promises-based lib abstracting authentification for write actions on the [Wiki
 - [How To](#how-to)
 - [Example](#example)
 - [Development](#development)
+- [Donate](#donate)
+- [See Also](#see-also)
+- [You may also like](#you-may-also-like)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -55,3 +59,37 @@ and the token should then be passed in the body of your request as form data (th
 ## Development
 
 To run the tests, make sure to create a `config/local.js` overriding `config/default.js` with your Wikidata username and password
+
+## Donate
+
+We are developing and maintaining tools to work with Wikidata from NodeJS, the browser, or simply the command line, with quality and ease of use at heart. Any donation will be interpreted as a "please keep going, your work is very much needed and awesome. PS: love". [Donate](https://liberapay.com/WikidataJS)
+
+## See Also
+* [wikidata-sdk](https://www.npmjs.com/package/wikidata-sdk)
+A javascript tool suite to query and work with Wikidata data, heavily used by wikidata-cli
+
+* [wikidata-cli](https://www.npmjs.com/package/wikidata-cli)
+The command-line interface to Wikidata
+
+* [wikidata-edit](https://www.npmjs.com/package/wikidata-edit)
+Edit Wikidata from NodeJS, used in wikidata-cli for all [write operations](#write-operations)
+
+* [wikidata-filter](https://npmjs.com/package/wikidata-filter)
+A command-line tool to filter a Wikidata dump by claim
+
+* [wikidata-subset-search-engine](https://github.com/inventaire/wikidata-subset-search-engine)
+Tools to setup an ElasticSearch instance fed with subsets of Wikidata
+
+* [wikidata-taxonomy](https://github.com/nichtich/wikidata-taxonomy)
+A command-line tool to extract taxonomies from Wikidata
+
+* [Other Wikidata external tools](https://www.wikidata.org/wiki/Wikidata:Tools/External_tools)
+
+## You may also like
+
+[![inventaire banner](https://inventaire.io/public/images/inventaire-brittanystevens-13947832357-CC-BY-lighter-blue-4-banner-500px.png)](https://inventaire.io)
+
+Do you know [inventaire.io](https://inventaire.io/)? It's a web app to share books with your friends, built on top of Wikidata! And its [libre software](http://github.com/inventaire/inventaire) too.
+
+## License
+[MIT](LICENSE.md)
