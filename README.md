@@ -30,6 +30,7 @@ var config = {
   password: 'pa55word',
   // Optional
   verbose: true // Default: false
+  userAgent: `your-module/${pkg.version} (https://git.repo/username/your-module)` // Default: to 'wikidata-token/${pkg.version} (${pkg.repository.url})`
 }
 var wdToken = require('wikidata-token')
 var getToken = wdToken(config)
