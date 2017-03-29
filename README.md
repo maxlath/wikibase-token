@@ -6,6 +6,8 @@ a promises-based lib abstracting authentification for write actions on the [Wiki
 
 
 - [How To](#how-to)
+  - [install](#install)
+  - [use](#use)
 - [Example](#example)
 - [Development](#development)
 - [Donate](#donate)
@@ -17,12 +19,12 @@ a promises-based lib abstracting authentification for write actions on the [Wiki
 
 ## How To
 
-* install
+### install
 ```bash
 npm install wikidata-token
 ```
 
-* use
+### use
 ```javascript
 var config = {
   // Required
@@ -30,6 +32,7 @@ var config = {
   password: 'pa55word',
   // Optional
   verbose: true // Default: false
+  wikibaseInstance: 'https://mywikibase.instance/w/api.php' // Default: https://www.wikidata.org/w/api.php
   userAgent: `your-module/${pkg.version} (https://git.repo/username/your-module)` // Default: to 'wikidata-token/${pkg.version} (${pkg.repository.url})`
 }
 var wdToken = require('wikidata-token')
