@@ -3,5 +3,5 @@ const getTokenGetter = require('./lib/get_token_getter')
 
 module.exports = (config) => {
   const loginCookiesPromise = login(config)
-  return getTokenGetter(loginCookiesPromise)
+  return getTokenGetter(config, loginCookiesPromise)
 }
