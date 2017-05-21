@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 2.3.0 - 2017-05-21
+* Added [support for OAuth](https://github.com/maxlath/wikidata-token#with-username--password)
+
 ## 2.2.0 - 2017-03-29
 * Added a `wikibaseInstance` option to allow using it on a different Wikibase instance
 
