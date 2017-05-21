@@ -4,9 +4,9 @@ module.exports = {
     password: 'your-wikidata-password'
   },
   oauth: {
-    consumerKey: 'your-consumer-token',
-    consumerSecret: 'your-secret-token',
+    consumer_key: 'your-consumer-token',
+    consumer_secret: 'your-secret-token',
     token: 'a-user-token',
-    tokenSecret: 'a-secret-token'
+    token_secret: 'a-secret-token'
   }
 }
