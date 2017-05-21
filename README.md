@@ -8,6 +8,8 @@ a promises-based lib abstracting authentification for write actions on the [Wiki
 - [How To](#how-to)
   - [install](#install)
   - [use](#use)
+    - [with username / password](#with-username--password)
+    - [with OAuth](#with-oauth)
 - [Example](#example)
 - [Development](#development)
 - [Donate](#donate)
@@ -25,6 +27,9 @@ npm install wikidata-token
 ```
 
 ### use
+
+#### with username / password
+
 ```javascript
 var config = {
   // Required
@@ -37,7 +42,6 @@ var config = {
 }
 var wdToken = require('wikidata-token')
 var getToken = wdToken(config)
-
 ```
 
 `getToken` is then a function, which when called returns an ES6 promise that shoud resolve to something looking like:
@@ -54,6 +58,26 @@ Your request header should then look like:
 'content-type': 'application/x-www-form-urlencoded'
 ```
 and the token should then be passed in the body of your request as form data (thus the `x-www-form-urlencoded` header) and NOT ~~JSON~~ (this one got me crazy and made me realize that there was a time JSON wasn't obvious..! poor elders of the Internet), in addition with the other field expected by the API action you're using: contrary to what the API documentation seem to indicate, for POST action, parameters are passed in the body and not in the url (out of `action` and `format`)
+
+#### with OAuth
+
+same as with username / password but your config object will look like:
+```js
+var config = {
+  // Required
+  oauth: {
+    // Obtained at registration
+    // https://www.mediawiki.org/wiki/OAuth/For_Developers#Registration
+    consumer_key: 'your-consumer-token',
+    consumer_secret: 'your-secret-token',
+    // Obtained when the user authorized your service
+    // see https://www.mediawiki.org/wiki/OAuth/For_Developers#Authorization
+    token: 'a-user-token',
+    token_secret: 'a-secret-token'
+  },
+  // Then the optional parameters are the same
+}
+```
 
 ## Example
 
