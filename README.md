@@ -68,12 +68,12 @@ var config = {
   oauth: {
     // Obtained at registration
     // https://www.mediawiki.org/wiki/OAuth/For_Developers#Registration
-    consumer_key: 'your-consumer-token',
-    consumer_secret: 'your-secret-token',
+    consumerKey: 'your-consumer-token',
+    consumerSecret: 'your-secret-token',
     // Obtained when the user authorized your service
     // see https://www.mediawiki.org/wiki/OAuth/For_Developers#Authorization
     token: 'a-user-token',
-    token_secret: 'a-secret-token'
+    tokenSecret: 'a-secret-token'
   },
   // Then the optional parameters are the same
 }
