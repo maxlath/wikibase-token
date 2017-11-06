@@ -22,6 +22,9 @@
     "git-hooks": "^1.1.8",
     "standard": "^8.6.0"
   },
+  "engines": {
+    "node": ">= 6.4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/maxlath/wikidata-token.git"
