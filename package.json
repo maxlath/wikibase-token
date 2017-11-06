@@ -1,6 +1,6 @@
 {
   "name": "wikidata-token",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "a promises-based lib abstracting authentification for write actions on the Wikidata API",
   "main": "wikidata-token.js",
   "scripts": {
