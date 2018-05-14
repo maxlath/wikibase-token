@@ -1,31 +1,37 @@
-const test = require('ava')
+const should = require('should')
 const CONFIG = require('config')
 const wikidataToken = require('../wikidata-token.js')
 
-test('get token from username and password', t => {
-  const tokenGetter = wikidataToken(CONFIG.credentials)
-  t.is(typeof tokenGetter, 'function')
+describe('wikidata-token', function () {
+  this.timeout(10000)
 
-  return tokenGetter()
-  .then(res => {
-    t.true(res.token.length > 40)
-    const { cookie } = res
-    // \w{30} => at least 32 characters
-    t.true(/wikidatawikiSession=\w{32}/.test(cookie))
-    t.true(/wikidatawikiUserID=\d{5}/.test(cookie))
-    t.true(/wikidatawikiUserName=\w+/.test(cookie))
-    t.true(/centralauth_Session=\w{32}/.test(cookie))
-    t.true(/centralauth_Token=\w{32}/.test(cookie))
+  it('should get token from username and password', done => {
+    const tokenGetter = wikidataToken(CONFIG.credentials)
+    tokenGetter.should.be.a.Function()
+    tokenGetter()
+    .then(res => {
+      res.token.length.should.be.above(40)
+      const { cookie } = res
+      // \w{30} => at least 32 characters
+      should(/wikidatawikiSession=\w{32}/.test(cookie)).be.true()
+      should(/wikidatawikiUserID=\d{5}/.test(cookie)).be.true()
+      should(/wikidatawikiUserName=\w+/.test(cookie)).be.true()
+      should(/centralauth_Session=\w{32}/.test(cookie)).be.true()
+      should(/centralauth_Token=\w{32}/.test(cookie)).be.true()
+      done()
+    })
+    .catch(done)
   })
-})
 
-test('get token from oauth', t => {
-  const { oauth } = CONFIG
-  const tokenGetter = wikidataToken({ oauth })
-  t.is(typeof tokenGetter, 'function')
-
-  return tokenGetter()
-  .then(res => {
-    t.true(res.token.length > 40)
+  it('should get token from oauth', done => {
+    const { oauth } = CONFIG
+    const tokenGetter = wikidataToken({ oauth })
+    tokenGetter.should.be.a.Function()
+    tokenGetter()
+    .then(res => {
+      res.token.length.should.be.above(40)
+      done()
+    })
+    .catch(done)
   })
 })
