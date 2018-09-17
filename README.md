@@ -80,9 +80,7 @@ var config = {
 ```
 
 ## Example
-
-* [used in wikidata-agent to create claims](https://github.com/maxlath/wikidata-agent/blob/master/server/lib/create_claim.coffee)
-
+* [used by wikidata-edit](https://github.com/maxlath/wikidata-edit/blob/master/lib/request.js)
 
 ## Development
 
