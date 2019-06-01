@@ -1,6 +1,13 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 3.0.0 - 2019-06-01
+**Breaking Changes**:
+  * Renamed the module 'wikidata-token' -> 'wikibase-token'
+  * `instance` is now a required parameter
+**Deprecated**:
+  * `wikibaseInstance` config parameter: renamed `instance` for consistency with other WikibaseJS modules
+
 ## 2.3.0 - 2017-05-21
 * Added [support for OAuth](https://github.com/maxlath/wikidata-token#with-username--password)
 
