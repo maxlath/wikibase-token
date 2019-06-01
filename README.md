@@ -1,6 +1,8 @@
 # wikibase-token
 
-A promises-based lib abstracting authentification for write requests on a [Wikibase API](https://www.wikidata.org/w/api.php).
+A promises-based lib abstracting authentification for write requests on a [Wikibase](http://wikiba.se) API.
+
+See [Wikidata API](https://www.wikidata.org/w/api.php) for API reference.
 
 This package was primarily published as `wikidata-token` but has now being generalized to support any Wikibase instance: [wikidata.org](https://www.wikidata.org) among others.
 
