@@ -1,6 +1,6 @@
 {
   "name": "wikibase-token",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "A promises-based lib abstracting authentification for write requests on a Wikibase API",
   "main": "wikibase-token.js",
   "scripts": {
