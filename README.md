@@ -1,6 +1,21 @@
+# wikibase-token
+
 A promises-based lib abstracting authentification for write requests on a [Wikibase API](https://www.wikidata.org/w/api.php).
 
 This package was primarily published as `wikidata-token` but has now being generalized to support any Wikibase instance: [wikidata.org](https://www.wikidata.org) among others.
+
+<div align="center">
+  <a href="https://wikiba.se"><img height="150" src="https://raw.githubusercontent.com/maxlath/wikibase-sdk/master/assets/wikibase.png" alt="wikibase"></a>
+  <!-- yeay hacky margin \o/ -->
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://wikidata.org"><img src="https://raw.githubusercontent.com/maxlath/wikibase-sdk/master/assets/wikidata.jpg" alt="wikidata"></a>
+</div>
+
+[![NPM](https://nodei.co/npm/wikibase-sdk.png?stars&downloads&downloadRank)](https://npmjs.com/package/wikibase-token/)
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Node](https://img.shields.io/badge/node-%3E=%20v6.4.0-brightgreen.svg)](http://nodejs.org)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Summary
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
