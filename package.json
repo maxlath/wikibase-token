@@ -9,6 +9,14 @@
     "prepublishOnly": "npm run lint && npm run test",
     "update-toc": "doctoc README.md"
   },
+  "files": [
+    "wikibase-token.js",
+    "lib"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "author": "maxlath",
   "license": "MIT",
   "dependencies": {
