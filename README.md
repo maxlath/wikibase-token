@@ -23,7 +23,7 @@ a promises-based lib abstracting authentification for write actions on the [Wiki
 
 ### install
 ```bash
-npm install wikidata-token
+npm install wikibase-token
 ```
 
 ### use
@@ -33,15 +33,15 @@ npm install wikidata-token
 ```javascript
 var config = {
   // Required
-  username: 'myWikidataUsername',
+  instance: 'https://mywikibase.instance', // For Wikidata, that would be 'https://www.wikidata.org'
+  username: 'myUsername',
   password: 'pa55word',
   // Optional
-  verbose: true // Default: false
-  wikibaseInstance: 'https://mywikibase.instance/w/api.php' // Default: https://www.wikidata.org/w/api.php
-  userAgent: `your-module/${pkg.version} (https://git.repo/username/your-module)` // Default: to 'wikidata-token/${pkg.version} (${pkg.repository.url})`
+  verbose: true, // Default: false
+  userAgent: `your-module/${pkg.version} (https://git.repo/username/your-module)` // Default: to 'wikibase-token/${pkg.version} (${pkg.repository.url})`
 }
-var wdToken = require('wikidata-token')
-var getToken = wdToken(config)
+var wbToken = require('wikibase-token')
+var getToken = wbToken(config)
 ```
 
 `getToken` is then a function, which when called returns an ES6 promise that shoud resolve to something looking like:
@@ -65,6 +65,7 @@ same as with username / password but your config object will look like:
 ```js
 var config = {
   // Required
+  instance: 'https://mywikibase.instance', // For Wikidata, that would be 'https://www.wikidata.org'
   oauth: {
     // Obtained at registration
     // https://www.mediawiki.org/wiki/OAuth/For_Developers#Registration
@@ -80,25 +81,25 @@ var config = {
 ```
 
 ## Example
-* [used by wikidata-edit](https://github.com/maxlath/wikidata-edit/blob/master/lib/request.js)
+* [used by wikibase-edit](https://github.com/maxlath/wikibase-edit/blob/master/lib/request.js)
 
 ## Development
 
-To run the tests, make sure to create a `config/local.js` overriding `config/default.js` with your Wikidata username and password
+To run the tests, make sure to create a `config/local.js` overriding `config/default.js` with the username and password of a Wikibase instance
 
 ## Donate
 
 We are developing and maintaining tools to work with Wikidata from NodeJS, the browser, or simply the command line, with quality and ease of use at heart. Any donation will be interpreted as a "please keep going, your work is very much needed and awesome. PS: love". [Donate](https://liberapay.com/WikidataJS)
 
 ## See Also
-* [wikidata-sdk](https://www.npmjs.com/package/wikidata-sdk)
-A javascript tool suite to query and work with Wikidata data, heavily used by wikidata-cli
+* [wikibase-sdk](https://www.npmjs.com/package/wikibase-sdk)
+A javascript tool suite to query and work with Wikibase data, heavily used by wikibase-cli
 
-* [wikidata-cli](https://www.npmjs.com/package/wikidata-cli)
-The command-line interface to Wikidata
+* [wikibase-cli](https://www.npmjs.com/package/wikibase-cli)
+The command-line interface to Wikibase
 
-* [wikidata-edit](https://www.npmjs.com/package/wikidata-edit)
-Edit Wikidata from NodeJS, used in wikidata-cli for all [write operations](#write-operations)
+* [wikibase-edit](https://www.npmjs.com/package/wikibase-edit)
+Edit Wikibase from NodeJS, used in wikibase-cli for all [write operations](#write-operations)
 
 * [wikidata-filter](https://npmjs.com/package/wikidata-filter)
 A command-line tool to filter a Wikidata dump by claim

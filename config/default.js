@@ -1,4 +1,5 @@
 module.exports = {
+  instance: 'https://www.wikidata.org',
   credentials: {
     username: 'your-wikidata-username',
     password: 'your-wikidata-password'

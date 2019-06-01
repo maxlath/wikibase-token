@@ -1,12 +1,13 @@
 const should = require('should')
-const CONFIG = require('config')
-const wikidataToken = require('../wikidata-token.js')
+const { instance, credentials, oauth } = require('config')
+const { username, password } = credentials
+const wikibaseToken = require('../wikibase-token.js')
 
-describe('wikidata-token', function () {
+describe('wikibase-token', function () {
   this.timeout(10000)
 
   it('should get token from username and password', done => {
-    const tokenGetter = wikidataToken(CONFIG.credentials)
+    const tokenGetter = wikibaseToken({ instance, username, password })
     tokenGetter.should.be.a.Function()
     tokenGetter()
     .then(res => {
@@ -24,8 +25,7 @@ describe('wikidata-token', function () {
   })
 
   it('should get token from oauth', done => {
-    const { oauth } = CONFIG
-    const tokenGetter = wikidataToken({ oauth })
+    const tokenGetter = wikibaseToken({ instance, oauth })
     tokenGetter.should.be.a.Function()
     tokenGetter()
     .then(res => {

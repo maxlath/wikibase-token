@@ -1,8 +1,8 @@
 {
-  "name": "wikidata-token",
+  "name": "wikibase-token",
   "version": "2.3.7",
-  "description": "a promises-based lib abstracting authentification for write actions on the Wikidata API",
-  "main": "wikidata-token.js",
+  "description": "a promises-based lib abstracting authentification for write actions on the a Wikibase instance API",
+  "main": "wikibase-token.js",
   "scripts": {
     "lint": "standard",
     "test": "mocha",
@@ -28,18 +28,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maxlath/wikidata-token.git"
+    "url": "https://github.com/maxlath/wikibase-token.git"
   },
   "keywords": [
-    "wikidata",
     "wikibase",
+    "wikidata",
+    "token",
+    "oauth",
     "auth",
-    "token"
+    "credentials",
+    "username",
+    "password"
   ],
   "bugs": {
-    "url": "https://github.com/maxlath/wikidata-token/issues"
+    "url": "https://github.com/maxlath/wikibase-token/issues"
   },
-  "homepage": "https://github.com/maxlath/wikidata-token",
+  "homepage": "https://github.com/maxlath/wikibase-token",
   "standard": {
     "globals": [
       "it",
