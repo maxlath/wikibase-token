@@ -13,12 +13,10 @@ describe('wikibase-token', function () {
     .then(res => {
       res.token.length.should.be.above(40)
       const { cookie } = res
-      // \w{30} => at least 32 characters
-      should(/wikidatawikiSession=\w{32}/.test(cookie)).be.true()
-      should(/wikidatawikiUserID=\d{5}/.test(cookie)).be.true()
-      should(/wikidatawikiUserName=\w+/.test(cookie)).be.true()
-      should(/centralauth_Session=\w{32}/.test(cookie)).be.true()
-      should(/centralauth_Token=\w{32}/.test(cookie)).be.true()
+      should(/wikibase_session=\w{32}/.test(cookie)).be.true()
+      should(/wikibaseUserID=\d+/.test(cookie)).be.true()
+      should(/wikibaseUserName=\w+/.test(cookie)).be.true()
+      should(/wikibaseToken=\w+/.test(cookie)).be.true()
       done()
     })
     .catch(done)
