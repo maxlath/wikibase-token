@@ -7,6 +7,7 @@
     "lint": "standard",
     "test": "mocha",
     "prepublishOnly": "npm run lint && npm run test",
+    "postpublish": "git push --tags",
     "update-toc": "doctoc README.md"
   },
   "files": [
