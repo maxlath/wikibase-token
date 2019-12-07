@@ -32,4 +32,23 @@ describe('wikibase-token', function () {
     })
     .catch(done)
   })
+
+  it( 'should reject on invalid username/password credentials', () => {
+    const tokenGetter = wikibaseToken({ instance, username: 'inva', password: 'lid' })
+    tokenGetter.should.be.a.Function()
+    return tokenGetter().should.be.rejected()
+  })
+
+  it( 'should reject on invalid oauth credentials', () => {
+    const tokenGetter = wikibaseToken({ instance, oauth: {
+        consumer_key:     'in',
+        consumer_secret:  'va',
+        token:            'li',
+        token_secret:     'd'
+      }
+    })
+    tokenGetter.should.be.a.Function()
+    return tokenGetter().should.be.rejected()
+  })
+
 })
