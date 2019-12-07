@@ -13,10 +13,10 @@ describe('wikibase-token', function () {
     .then(res => {
       res.token.length.should.be.above(40)
       const { cookie } = res
-      should(/wikibase_session=\w{32}/.test(cookie)).be.true()
-      should(/wikibaseUserID=\d+/.test(cookie)).be.true()
-      should(/wikibaseUserName=\w+/.test(cookie)).be.true()
-      should(/wikibaseToken=\w+/.test(cookie)).be.true()
+      should(/.+[sS]ession=\w{32}/.test(cookie)).be.true( 'should contain session ID' )
+      should(/.+UserID=\d+/.test(cookie)).be.true( 'should contain user ID' )
+      should(/.+UserName=\w+/.test(cookie)).be.true( 'should contain username' )
+      should(/.+Token=\w+/.test(cookie)).be.true( 'should contain token' )
       done()
     })
     .catch(done)
