@@ -45,12 +45,14 @@ describe('wikibase-token', function () {
     .catch(done)
   })
 
-  it('should reject on invalid oauth credentials',  done => {
-    const tokenGetter = wikibaseToken({ instance, oauth: {
-        consumer_key:     'in',
-        consumer_secret:  'va',
-        token:            'li',
-        token_secret:     'd'
+  it('should reject on invalid oauth credentials', done => {
+    const tokenGetter = wikibaseToken({
+      instance,
+      oauth: {
+        consumer_key: 'in',
+        consumer_secret: 'va',
+        token: 'li',
+        token_secret: 'd'
       }
     })
     tokenGetter.should.be.a.Function()
