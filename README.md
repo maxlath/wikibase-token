@@ -1,5 +1,7 @@
 # wikibase-token
 
+> :warning: this project has been merged back into [`wikibase-edit`](https://github.com/maxlath/wikibase-edit) (see [issue](https://github.com/maxlath/wikibase-edit/issues/49)). There will thus be no more developments in this repository.
+
 A promises-based lib abstracting authentification for write requests on a [Wikibase](http://wikiba.se) API.
 
 See [Wikidata API](https://www.wikidata.org/w/api.php) for API reference.
